@@ -109,7 +109,7 @@ function TDLCreator() {
 										{/*-------- Creating a Tab.Pane for each todo description and date ------*/}
 										{todos.map((todo, index) => (
 											<Tab.Pane eventKey={`todo-${index}`} key={index}>
-												{/* This helps to make the description editable */}
+												{/* --------------This helps to make the description editable --------------*/}
 												<p
 													contenteditable="true"
 													suppressContentEditableWarning
@@ -117,7 +117,7 @@ function TDLCreator() {
 													{todo.description}
 												</p>
 											
-												{/* Editable Due Date */}
+												{/* -----------Make the due date editabe---------- */}
 												<label>
 													<input
 														type="date"
