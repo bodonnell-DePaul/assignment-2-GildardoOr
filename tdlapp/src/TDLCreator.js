@@ -50,8 +50,8 @@ function TDLCreator() {
 		<div className="d-flex justify-content-center align-items-center min-vh-100">
 			<Container>
 				{/*------------- Start of Row 1 ---------------------------*/}
-				<Row className="justify-content-center">
-					<Col xs="auto">Assignment 2: Gildardo Orea Amador ToDo List </Col>
+				<Row className="justify-content-center text-align">
+					Assignment 2: Gildardo Orea Amador ToDo List 
 				</Row>
 
 				{/*------------- Start of Row 2 ---------------------------*/}		
@@ -62,7 +62,7 @@ function TDLCreator() {
 							{/*------------- Input todo item ---------------------------*/}
 							<Form.Group className="mb-3" controlId="formBasicText">
 								<Form.Label>Todo Item</Form.Label>
-								<Form.Control type="text" placeholder="Enter Todo Item" />
+								<Form.Control type="text" placeholder="Add Todo Item" />
 							</Form.Group>
 
 							{/*------------- Input Date ---------------------------*/}

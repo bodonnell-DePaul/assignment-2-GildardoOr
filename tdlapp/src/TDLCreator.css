@@ -1,4 +1,12 @@
 .custom-background {
-    background-color: green; /* Basic red */
+    background-color: #18e2a5e0; /* Basic red */
     color: white; /* White text for better readability */
+    height: 250px;
+  }
+
+  .text-align{
+    font-size: 35px;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    /* font-weight: bold; */
   }
