@@ -11,7 +11,7 @@ import { useState } from 'react';
 
 console.log(initialTodos);  // This should now print the array to the console
 
-// Helper function to determine color variant based on due date
+// This Function is to determine the color of the tab depending on the date 
 const getTodoVariant = (dueDate) => {
 	const currentDate = new Date();
 	const todoDate = new Date(dueDate);
@@ -19,13 +19,13 @@ const getTodoVariant = (dueDate) => {
 	const dayDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
 
 	if (dayDiff > 7) {
-	  return 'primary';  // Due date is more than 7 days away
+	  return 'primary';  // If due date is more than 7 days away
 	} else if (dayDiff <= 7 && dayDiff >= 4) {
-	  return 'success';  // Due date is within the next 7 days
+	  return 'success';  // This is if due date is within the next 7 days
 	} else if (dayDiff < 4 && dayDiff >= 2) {
-	  return 'warning';  // Due date is within the next 4 days
+	  return 'warning';  // This is if date is within the next 4 days
 	} else if (dayDiff < 2) {
-	  return 'danger';  // Due date is within the next 2 days or overdue
+	  return 'danger';  // This is if date is within the next 2 days or overdue
 	}
 };
 
@@ -61,20 +61,22 @@ function TDLCreator() {
 						<Form>
 							{/*------------- Input todo item ---------------------------*/}
 							<Form.Group className="mb-3" controlId="formBasicText">
-								<Form.Label>Todo Item</Form.Label>
+								<Form.Label className="custom-label">ToDo Item</Form.Label>
 								<Form.Control type="text" placeholder="Add Todo Item" />
 							</Form.Group>
 
 							{/*------------- Input Date ---------------------------*/}
 							<Form.Group className="mb-3" controlId="formBasicDate">
-								<Form.Label>Due Date</Form.Label>
+								<Form.Label className="custom-label">Due Date</Form.Label>
 								<Form.Control type="date" placeholder="Date" />
 							</Form.Group>
 
 							{/*------------- Submit button ---------------------------*/}
-							<Button variant="primary" type="submit">
-								Submit
-							</Button>
+							<div className="text-center">
+								<Button variant="primary" type="submit" className="w-100">
+									Add Todo
+								</Button>
+							</div>
 						</Form>
 					</Col>
 

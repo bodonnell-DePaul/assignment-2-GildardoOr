@@ -2,6 +2,7 @@
     background-color: #18e2a5e0; /* Basic red */
     color: white; /* White text for better readability */
     height: 250px;
+    padding-top: 5px;
   }
 
   .text-align{
@@ -10,3 +11,8 @@
     font-family: Arial, sans-serif;
     /* font-weight: bold; */
   }
+
+  .custom-label {
+    color: black;
+    padding: 5px;
+}
