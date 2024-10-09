@@ -9,6 +9,8 @@ import { todos as initialTodos } from './todoItems.js';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { useState } from 'react';
 
+// ----------------------Gidardo Orea Amador, Assignment 2------------------
+
 console.log(initialTodos);  // This should now print the array to the console
 
 // This Function is to determine the color of the tab depending on the date 
@@ -86,15 +88,17 @@ function TDLCreator() {
 							<Row>
 								<Col>
 									<ListGroup>
-										{/* Creating a ListGroup.Item for each todo */}
+										{/* ------Creating a ListGroup.Item for each todo--------- */}
 										{todos.map((todo, index) => (
 											<ListGroup.Item
 												action key={index}
 												eventKey={`todo-${index}`}
 												style={{ cursor: 'pointer' }}
-												variant={getTodoVariant(todo.dueDate)}  // Apply the color variant based on due date
+												// Here we apply the color variant based on due date
+												variant={getTodoVariant(todo.dueDate)}  
 											>
-												{todo.title}  {/* Each list group item will display the todo title */}
+										{/*-------Here each list group item will display the todo title ------*/}
+												{todo.title}  
 											</ListGroup.Item>
 										))}
 									</ListGroup>
@@ -102,10 +106,10 @@ function TDLCreator() {
 
 								<Col>
 									<Tab.Content style={{ marginLeft: '20px' }}>
-										{/* Creating a Tab.Pane for each todo description and date */}
+										{/*-------- Creating a Tab.Pane for each todo description and date ------*/}
 										{todos.map((todo, index) => (
 											<Tab.Pane eventKey={`todo-${index}`} key={index}>
-												{/* Editable Description */}
+												{/* This helps to make the description editable */}
 												<p
 													contenteditable="true"
 													suppressContentEditableWarning
@@ -119,7 +123,6 @@ function TDLCreator() {
 														type="date"
 														value={todo.dueDate}
 														onChange={(e) => handleDueDateChange(index, e.target.value)}
-														// style={{ marginLeft: '10px' }}
 													/>
 												</label>
 											</Tab.Pane>
